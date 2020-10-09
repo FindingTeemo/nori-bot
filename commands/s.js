@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args, ops) => {
 
   try {
-    if (!args[0] && message.channel.id != '570803215310782480') return message.channel.send('Proper Usage: +scr word');
+    if (!args[0] && message.channel.id != '570803215310782480') return message.channel.send('Proper Usage: +s word');
 
     var one = ["a", "e", "i", "o", "u", "l", "n", "s", "t", "r"];
     var two = ["d", "g"];
@@ -14,7 +14,7 @@ exports.run = async (client, message, args, ops) => {
     var ten = ["q", "z"];
 
     var score = 0;
-    for (var i = 5; i < message.content.length; i++) {
+    for (var i = 3; i < message.content.length; i++) {
       if (one.includes(message.content.charAt(i).toLowerCase())) {
         score += 1;
       }
